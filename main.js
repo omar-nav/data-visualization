@@ -11,7 +11,7 @@ var simulation = d3
     })
   )
   .force('charge', d3.forceManyBody().strength(-300))
-  .force('center', d3.forceCenter(width / 1.7, height / 1.7));
+  .force('center', d3.forceCenter(width / 2, height / 2));
 
 d3.json(
   'https://raw.githubusercontent.com/omar-nav/data-visualization/main/data.json',
@@ -80,14 +80,20 @@ d3.json(
 
       node
         .attr('r', 20)
-        .style('fill', '#d9d9d9')
+        .style('fill', function (d) {
+          if (d.id < 11) {
+            return '#e41a1c';
+          } else {
+            return '#377eb8';
+          }
+        })
         .style('stroke', '#969696')
         .style('stroke-width', '1px')
         .attr('cx', function (d) {
-          return d.x + 6;
+          return d.x + 8;
         })
         .attr('cy', function (d) {
-          return d.y - 6;
+          return d.y - 8;
         });
 
       label
@@ -98,7 +104,7 @@ d3.json(
           return d.y;
         })
         .style('font-size', '22px')
-        .style('fill', '#4393c3');
+        .style('fill', '#000');
     }
   }
 );
