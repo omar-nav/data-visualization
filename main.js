@@ -10,8 +10,8 @@ var simulation = d3
       return d.id;
     })
   )
-  .force('charge', d3.forceManyBody().strength(-400))
-  .force('center', d3.forceCenter(width / 2, height / 2));
+  .force('charge', d3.forceManyBody().strength(-300))
+  .force('center', d3.forceCenter(width / 1.7, height / 1.7));
 
 d3.json(
   'https://raw.githubusercontent.com/omar-nav/data-visualization/main/data.json',
@@ -38,7 +38,7 @@ d3.json(
       .data(graph.nodes)
       .enter()
       .append('circle')
-      .attr('r', 6)
+      .attr('r', 13)
       .call(
         d3
           .drag()
@@ -97,7 +97,7 @@ d3.json(
         .attr('y', function (d) {
           return d.y;
         })
-        .style('font-size', '20px')
+        .style('font-size', '22px')
         .style('fill', '#4393c3');
     }
   }
