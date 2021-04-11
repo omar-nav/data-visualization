@@ -14,7 +14,7 @@ var simulation = d3
   .force('center', d3.forceCenter(width / 2, height / 2));
 
 d3.json(
-  'https://raw.githubusercontent.com/omar-nav/data-visualization/main/data.json',
+  'https://raw.githubusercontent.com/omar-nav/data-visualization/main/datasets/CSPcontractsWCloud.json',
   function (error, graph) {
     if (error) throw error;
 
