@@ -1,0 +1,15 @@
+html {
+  height: 95%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+iframe {
+  display: block;
+  width: 100%;
+  border: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
