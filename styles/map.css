@@ -11,15 +11,6 @@ body {
   height: 100%;
 }
 
-.buscador {
-  z-index: 222;
-}
-
-.marco {
-  background: white;
-  padding: 5px;
-  border: 1px solid black;
-}
 /* legend */
 .legend {
   width: 230px;
