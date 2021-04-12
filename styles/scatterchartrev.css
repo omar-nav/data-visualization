@@ -7,8 +7,9 @@ body {
   padding: 0;
 }
 iframe {
-  display: block;
+  height: 99%;
   width: 100%;
+  display: block;
   border: none;
   overflow-y: auto;
   overflow-x: hidden;

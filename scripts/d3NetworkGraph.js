@@ -126,9 +126,9 @@ var myChart = familyChart().nodes(nodes).links(edges);
 
 // defining the width and height of the svg
 var width = window.innerWidth, // default width
-  height = window.innerHeight;
+  height = window.innerHeight * 0.9;
 
-// drawing the svg and calling the familyChart opject.
+// drawing the svg and calling the familyChart object.
 var svg = d3
   .select('#forces')
   .append('svg')
@@ -300,7 +300,7 @@ function familyChart() {
       .attr('fill', function (d, i) {
         // white if family, otherwise image
         if (d.type == 'family') {
-          return 'white';
+          return '#bdbdbd';
         } else {
           return 'url(#my_image' + i + ')';
         }
