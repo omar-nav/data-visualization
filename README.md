@@ -11,3 +11,5 @@ Sources:
 [eMarketer - US Subscription Video Services Revenue Estimates 2018](https://www.emarketer.com/chart/228229/us-subscription-video-services-revenue-estimates-2018)
 
 [TM Forum - Public cloud: An essential but not singular solution for CSPs](https://inform.tmforum.org/research-reports/public-cloud-an-essential-component-for-csps/)
+
+[World Bank Group - Mobile Cellular Subscriptions](https://data.worldbank.org/indicator/IT.CEL.SETS?view=chart)

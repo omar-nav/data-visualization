@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <title>Animated Map: Mobile Cellular Subscriptions</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="styles/mapanimated.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="./map-timeslider-subs/leaflet.timeline.js"></script>
+  </head>
+  <body>
+    <nav id="navbar">
+      <ul class="horizontal">
+        <li>
+          <a href="home-network-graph.html">Network Graph</a>
+        </li>
+        <li>
+          <a href="map-geographic.html">Geographic Map</a>
+        </li>
+        <li>
+          <a href="subscriptions-map.html" class="active"
+            >Geographic Map Animated</a
+          >
+        </li>
+        <li>
+          <a href="scatter-charts.html">Scatter Charts</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="map"></div>
+
+    <script>
+      function choroplethize(numberOfSubs) {
+        return numberOfSubs > 201
+          ? '#0c2c84'
+          : numberOfSubs > 147
+          ? '#225ea8'
+          : numberOfSubs > 123
+          ? '#1d91c0'
+          : numberOfSubs > 97
+          ? '#41b6c4'
+          : numberOfSubs > 68
+          ? '#7fcdbb'
+          : numberOfSubs > 20
+          ? '#c7e9b4'
+          : // if less than 20
+          numberOfSubs > 0
+          ? '#ffffcc'
+          : // if datum not available
+            '#edf8fb';
+      }
+
+      var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+      var osmAttrib =
+        '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+      var osm = L.tileLayer(osmUrl, { maxZoom: 18, attribution: osmAttrib });
+      var map = L.map('map', {
+        layers: [osm],
+        center: new L.LatLng(0, 0),
+        zoom: 2,
+      });
+      var timeline;
+      var timelineControl;
+
+      function onLoadData(data) {
+        timeline = L.timeline(data, {
+          style: function (data) {
+            return {
+              stroke: false,
+              color: choroplethize(data.properties.subscriptions_number_of),
+              fillOpacity: 0.5,
+            };
+          },
+          waitToUpdateMap: true,
+          onEachFeature: function (feature, layer) {
+            layer.bindTooltip(
+              'Country:   ' +
+                feature.properties.name +
+                '<br>Number of Mobile Cell Subscriptions (per 100 people): ' +
+                feature.properties.subscriptions_number_of
+            );
+          },
+        });
+
+        timelineControl = L.timelineSliderControl({
+          formatOutput: function (date) {
+            return new Date(date).toLocaleDateString();
+          },
+          enableKeyboardControls: true,
+        });
+        timeline.addTo(map);
+        timelineControl.addTo(map);
+        timelineControl.addTimelines(timeline);
+      }
+    </script>
+    <script src="./map-timeslider-subs/cell-subscriptions-parsed.jsonp"></script>
+  </body>
+</html>
