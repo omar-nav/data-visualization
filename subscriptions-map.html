@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" type="text/css" href="styles/mapanimated.css" />
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-    <script src="./map-timeslider-subs/leaflet.timeline.js"></script>
+    <script src="./scripts/leaflet.timeline.js"></script>
   </head>
   <body>
     <nav id="navbar">
@@ -58,8 +58,8 @@
       var osm = L.tileLayer(osmUrl, { maxZoom: 18, attribution: osmAttrib });
       var map = L.map('map', {
         layers: [osm],
-        center: new L.LatLng(0, 0),
-        zoom: 2,
+        center: new L.LatLng(0, -16),
+        zoom: 2.5,
       });
       var timeline;
       var timelineControl;
@@ -95,6 +95,6 @@
         timelineControl.addTimelines(timeline);
       }
     </script>
-    <script src="./map-timeslider-subs/cell-subscriptions-parsed.jsonp"></script>
+    <script src="./datasets/cell-subscriptions-parsed.jsonp"></script>
   </body>
 </html>
