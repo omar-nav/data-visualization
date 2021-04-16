@@ -47,8 +47,8 @@ var osmAttrib =
 var osm = L.tileLayer(osmUrl, { maxZoom: 18, attribution: osmAttrib });
 var map = L.map('map', {
   layers: [osm],
-  center: new L.LatLng(0, 0),
-  zoom: 2,
+  center: new L.LatLng(0, -16),
+  zoom: 2.5,
 });
 var timeline;
 var timelineControl;
