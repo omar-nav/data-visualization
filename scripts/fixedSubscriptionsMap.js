@@ -67,7 +67,7 @@ function onLoadData(data) {
       layer.bindTooltip(
         'Country:   ' +
           feature.properties.name +
-          '<br>Number of Fixed Telephone Subscriptions (per 100): ' +
+          '<br>Number of Fixed Telephone Subscriptions (per 100 people): ' +
           feature.properties.subscriptions_number_of
       );
     },
