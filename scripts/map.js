@@ -13,14 +13,17 @@ const numberWithCommas = (from) => {
 
 function choroplethizeWhatsAppUsers2019(d) {
   return d > 99
-    ? '#810f7c'
+    ? '#045a8d'
     : d > 60
-    ? '#8856a7'
+    ? '#2b8cbe'
     : d > 44
-    ? '#8c96c6'
+    ? '#74a9cf'
     : d > 28
-    ? '#b3cde3'
-    : '#edf8fb';
+    ? '#bdc9e1'
+    : d > 0
+    ? '#f1eef6'
+    : // if not available
+      '#cccccc';
 }
 
 function styleWhatsAppUsers(feature) {
