@@ -1,6 +1,7 @@
 # Data Visualization for Analysis of the Communications Service Provider Industry
 
-Data visualizations to communicate trends from the Communications Service Provider Industry
+[Data visualizations](https://omar-nav.github.io/data-visualization/home-network-graph.html)
+to communicate trends from the Communications Service Provider Industry
 
 Sources:
 
@@ -11,5 +12,7 @@ Sources:
 [eMarketer - US Subscription Video Services Revenue Estimates 2018](https://www.emarketer.com/chart/228229/us-subscription-video-services-revenue-estimates-2018)
 
 [TM Forum - Public cloud: An essential but not singular solution for CSPs](https://inform.tmforum.org/research-reports/public-cloud-an-essential-component-for-csps/)
+
+[World Bank Group - Fixed Telephone Subscriptions](https://data.worldbank.org/indicator/IT.MLT.MAIN.P2?view=chart)
 
 [World Bank Group - Mobile Cellular Subscriptions](https://data.worldbank.org/indicator/IT.CEL.SETS?view=chart)
