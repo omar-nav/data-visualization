@@ -3,7 +3,7 @@
 [Data visualizations](https://omar-nav.github.io/data-visualization/home-network-graph.html)
 to communicate trends from the Communications Service Provider Industry
 
-Sources:
+## Non-spatial Sources:
 
 [All Connect - Which streaming service has the best original shows and movies? We scraped the data to find out](https://www.allconnect.com/blog/ranking-best-original-content-streaming)
 
@@ -16,3 +16,9 @@ Sources:
 [World Bank Group - Fixed Telephone Subscriptions](https://data.worldbank.org/indicator/IT.MLT.MAIN.P2?view=chart)
 
 [World Bank Group - Mobile Cellular Subscriptions](https://data.worldbank.org/indicator/IT.CEL.SETS?view=chart)
+
+[World Bank Group - Secure Internet Servers](https://data.worldbank.org/indicator/IT.NET.SECR.P6?end=2019&start=2010&view=chart)
+
+## Spatial Source:
+
+[Eurostat - Countries 2020](https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/countries)

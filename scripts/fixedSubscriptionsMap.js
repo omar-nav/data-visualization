@@ -1,17 +1,17 @@
 function choroplethize(numberOfSubs) {
-  return numberOfSubs > 58.3
+  return numberOfSubs > 58.2
     ? '#0c2c84'
-    : numberOfSubs > 37.5
+    : numberOfSubs > 37.4
     ? '#225ea8'
-    : numberOfSubs > 26.5
+    : numberOfSubs > 26.4
     ? '#1d91c0'
-    : numberOfSubs > 16
+    : numberOfSubs > 15.9
     ? '#41b6c4'
-    : numberOfSubs > 8.7
+    : numberOfSubs > 8.6
     ? '#7fcdbb'
-    : numberOfSubs > 2.2
+    : numberOfSubs > 2.1
     ? '#c7e9b4'
-    : numberOfSubs > 0
+    : numberOfSubs >= 0
     ? '#ffffcc'
     : // if datum not available
       '#edf8fb';

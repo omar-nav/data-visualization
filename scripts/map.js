@@ -12,15 +12,15 @@ const numberWithCommas = (from) => {
 };
 
 function choroplethizeWhatsAppUsers2019(d) {
-  return d > 99
+  return d > 98
     ? '#045a8d'
-    : d > 60
+    : d > 59
     ? '#2b8cbe'
-    : d > 44
+    : d > 43
     ? '#74a9cf'
-    : d > 28
+    : d > 27
     ? '#bdc9e1'
-    : d > 0
+    : d >= 0
     ? '#f1eef6'
     : // if not available
       '#cccccc';
