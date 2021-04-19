@@ -5,6 +5,10 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" type="text/css" href="styles/mapanimated.css" />
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
@@ -14,28 +18,31 @@
     <nav id="navbar">
       <ul class="horizontal">
         <li>
-          <a href="home-network-graph.html">Network Graph</a>
+          <a href="home-network-graph.html">CSP Cloud Parternships</a>
         </li>
         <li>
-          <a href="map-geographic.html">Geographic Map</a>
+          <a href="map-geographic.html">WhatsApp Users Map</a>
         </li>
         <li>
-          <a href="cell-subscriptions-map.html" class="active"
-            >Geographic Map Animated: Cell Subscriptions</a
-          >
+          <a href="secure-servers-map.html">Secure Servers Map</a>
         </li>
         <li>
-          <a href="fixed-subscriptions-map.html"
-            >Geographic Map Animated: Fixed Telephone Subscriptions</a
-          >
+          <a href="scatter-charts.html">Original Content & Ratings</a>
         </li>
         <li>
-          <a href="secure-servers-map.html"
-            >Geographic Map Animated: Secure Servers</a
-          >
-        </li>
-        <li>
-          <a href="scatter-charts.html">Scatter Charts</a>
+          <div class="dropdown">
+            <button class="dropbtn" style="background-color: #377eb8">
+              <li>Phone Subscriptions</li>
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="fixed-subscriptions-map.html"
+                >Fixed Telephone Subscriptions Map</a
+              >
+              <a href="cell-subscriptions-map.html">Cell Subscriptions Map</a>
+              <a href="line-graphs.html">Subscriptions</a>
+            </div>
+          </div>
         </li>
       </ul>
     </nav>

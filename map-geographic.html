@@ -9,6 +9,10 @@
       integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
       crossorigin=""
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" type="text/css" href="styles/map.css" />
     <script
@@ -22,28 +26,31 @@
     <nav id="navbar">
       <ul class="horizontal">
         <li>
-          <a href="home-network-graph.html">Network Graph</a>
+          <a href="home-network-graph.html">CSP Cloud Parternships</a>
         </li>
         <li>
-          <a href="map-geographic.html" class="active">Geographic Map</a>
+          <a href="map-geographic.html" class="active">WhatsApp Users Map</a>
         </li>
         <li>
-          <a href="cell-subscriptions-map.html"
-            >Geographic Map Animated: Cell Subscriptions</a
-          >
+          <a href="secure-servers-map.html">Secure Servers Map</a>
         </li>
         <li>
-          <a href="fixed-subscriptions-map.html"
-            >Geographic Map Animated: Fixed Telephone Subscriptions</a
-          >
+          <a href="scatter-charts.html">Original Content & Ratings</a>
         </li>
         <li>
-          <a href="secure-servers-map.html"
-            >Geographic Map Animated: Secure Servers</a
-          >
-        </li>
-        <li>
-          <a href="scatter-charts.html">Scatter Charts</a>
+          <div class="dropdown">
+            <button class="dropbtn">
+              <li>Phone Subscriptions</li>
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="fixed-subscriptions-map.html"
+                >Fixed Telephone Subscriptions Map</a
+              >
+              <a href="cell-subscriptions-map.html">Cell Subscriptions Map</a>
+              <a href="line-graphs.html">Subscriptions</a>
+            </div>
+          </div>
         </li>
       </ul>
     </nav>

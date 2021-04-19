@@ -64,11 +64,14 @@ function onLoadData(data) {
     },
     waitToUpdateMap: true,
     onEachFeature: function (feature, layer) {
+      var roundedNumber = Math.round(
+        feature.properties.subscriptions_number_of
+      ).toFixed(0);
       layer.bindTooltip(
         'Country:   ' +
           feature.properties.name +
           '<br>Number of Fixed Telephone Subscriptions (per 100 people): ' +
-          feature.properties.subscriptions_number_of
+          roundedNumber
       );
     },
   });
